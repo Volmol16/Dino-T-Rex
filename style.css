@@ -1,0 +1,113 @@
+* {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid #759fb0;
+    margin: auto;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/dino.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url(img/cactus.png);
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: cactusMov 1s infinite linear;
+}
+
+.info__game {
+    font-size: 36px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+#dialogoverlay {
+    display: none;
+    opacity: .8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  #dialogbox {
+    display: none;
+    position: fixed;
+    background: #000;
+    border-radius: 7px;
+    width: 550px;
+    z-index: 10;
+  }
+  
+  #dialogbox>div {
+    background: #FFF;
+    margin: 8px;
+  }
+  
+  #dialogbox>div>#dialogboxhead {
+    background: #666;
+    font-size: 19px;
+    padding: 10px;
+    color: #CCC;
+  }
+  
+  #dialogbox>div>#dialogboxbody {
+    background: #333;
+    padding: 20px;
+    color: #FFF;
+  }
+  
+  #dialogbox>div>#dialogboxfoot {
+    background: #666;
+    padding: 10px;
+    text-align: right;
+  }
+
+@keyframes cactusMov {
+    0% {
+        left: 580px;
+    }
+    100% {
+        left: -20px
+    }
+}
+
+.jump {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 130px;
+    }
+    50% {
+        top: 80px;
+    }
+    80% {
+        top: 130px;
+    }
+    100% {
+        top: 150px;
+    }
+}
