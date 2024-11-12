@@ -17,6 +17,7 @@ body {
     border-radius: 16px;
     background-color: #f7a54e79;
     margin-top: 180px;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
 
 #dino {
@@ -26,6 +27,7 @@ body {
     top: 150px;
     right: 550px;
     transform: scaleX(-1);
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
 }
 
 #cactus {
@@ -35,6 +37,7 @@ body {
     top: 90px;
     left: 580px;
     animation: cactusMov 1s infinite linear;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
 }
 
 #timer {
