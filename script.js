@@ -1,6 +1,8 @@
 const dino = document.getElementById('dino');
 const cactus = document.getElementById('cactus');
 let gameOverScreen = null;
+let startTime = null;
+let timer = null;
 
 document.addEventListener("keydown", function(event) {
     jump()
@@ -14,13 +16,23 @@ function jump () {
         dino.classList.remove("jump")
     }, 300)
 }
+function startTimer() {
+    startTime = new Date();
+    timer = setInterval(() => {
+        const elapsedTime = new Date() - startTime; 
+        const seconds = Math.floor(elapsedTime / 10);
+        document.getElementById('timer').textContent = seconds; 
+    }, 10); 
+}
+
 
 let isAlive = setInterval( function() {
     let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"))
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"))
 
-    if(cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
+    if(cactusLeft < 40 && cactusLeft > 0 && dinoTop >= 140) {
         clearInterval(isAlive);
+        clearInterval(timer)
 
         gameOverScreen = document.createElement('div');
         gameOverScreen.id = 'gameOver';
@@ -60,3 +72,5 @@ let isAlive = setInterval( function() {
         cactus.style.animationPlayState = 'paused';
     }
 })
+
+startTimer();

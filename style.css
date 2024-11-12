@@ -4,12 +4,19 @@
     font-style: normal;
 }
 
+body {
+    background-color: #f7a54e31;
+}
+
 .game {
+    position: relative;
     width: 650px;
     height: 200px;
     border-bottom: 30px solid #f7a54e;
     margin: auto;
     border-radius: 16px;
+    background-color: #f7a54e79;
+    margin-top: 180px;
 }
 
 #dino {
@@ -28,6 +35,14 @@
     top: 90px;
     left: 580px;
     animation: cactusMov 1s infinite linear;
+}
+
+#timer {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: white;
+    font-size: 26px;
 }
 
 .info__game {
